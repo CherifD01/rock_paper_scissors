@@ -1,5 +1,8 @@
 "use strict";
 
+const jsdom = require("jsdom");
+const {  JSDOM  } = jsdom;
+
 const ps = require("prompt-sync")
 const prompt = ps();
 
@@ -56,6 +59,14 @@ function playRound(computerChoice, humanChoice){
       }
 }
 
+const startRound = document.querySelector("#startRound");
+
+startRound.addEventListener("click", function() {
+    playRound(getComputerChoice,getHumanChoice);
+});
+
+
+/*
 function playGame(){
    
  for(let i = 0; i < 5; i++){
@@ -73,12 +84,10 @@ function playGame(){
     }
 }
 
-
+*/
 let computerScore = 0;
 let humanScore = 0;
 
 
 
-playGame();
-
-console.log();
+//playGame();
