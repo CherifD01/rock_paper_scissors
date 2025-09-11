@@ -22,14 +22,9 @@ function getComputerChoice(){
 
 function roundIntro(){
     console.log("What do you want to select?");
+    
 }
 //Plays a round of rock paper scissors 
-
-function checkScore(){
-    if (gameResult.textContent === " You won the game"){
-        console.log("Hey!");
-    }
-}
 
 function playRound(choice){
     const computerChoice = getComputerChoice();
@@ -57,7 +52,7 @@ function playRound(choice){
         gameScore.textContent = humanScore + " - " + computerScore;
         
     }
-    if (humanScore === 5){
+   if (humanScore === 5){
         humanScore = humanScore - humanScore;
         computerScore = computerScore - computerScore;
         gameResult.textContent = "You won the game!";
@@ -67,7 +62,7 @@ function playRound(choice){
         computerScore = computerScore - computerScore;
         gameResult.textContent = "You lost the game!";
     }
-
+    
 }
 
 
@@ -85,7 +80,12 @@ let humanScore = 0;
 gameScore.textContent = humanScore + " - " + computerScore;
 
 //Starts the round
-startRound.addEventListener("click", roundIntro);
+startRound.addEventListener("click", () => {
+    humanScore = humanScore - humanScore;
+    computerScore = computerScore - computerScore;
+    gameScore.textContent = humanScore + " - " + computerScore;
+    gameResult.textContent = " ";
+});
 
 //Where the selection for the user is
 rockSelection.addEventListener("click", () => playRound("rock"));
