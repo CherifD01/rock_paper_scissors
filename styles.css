@@ -1,3 +1,136 @@
-body (
+@font-face {
+    font-family: "CustomFontPokemon";
+    src: url(./images/pokemon-firered-leafgreen-font-recreation.otf.woff2) format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body{
     display: flex;
-)
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 2px;
+    background-color: rgb(49, 56, 147);
+    
+}
+
+.header{
+     border: 8px solid black;
+    border-radius: 10px;
+}
+
+.header > .header-sprites{
+    display: flex;
+    justify-content: space-between;
+}
+
+.explanation-text{
+    font-family: "CustomFontPokemon";
+    margin-top: 50px;
+}
+
+.option-text{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    font-family: "CustomFontPokemon";
+}
+
+img{
+    width: 50px;
+    
+}
+
+
+.selection{
+    margin-top: 300px;
+}
+
+.selection > .container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 8px solid black;
+}
+
+#score{
+    margin-top: 50px;
+    font-family: "CustomFontPokemon";
+}
+
+#result{
+    font-family: "CustomFontPokemon";
+}
+
+
+.roundStarter{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.footer{
+    border: 8px solid black;
+    border-radius: 10px;
+    margin-top: auto;
+}
+
+.footer > .footer-sprites{
+    display: flex;
+    justify-content: space-between;
+    
+}
+/*
+.header > .container{
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+.selection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+   border: 5px solid rebeccapurple; 
+    max-height: 1000px;
+} 
+
+.selection > .container{
+    display: flex;
+    justify-content: space-evenly;
+    border: 8px solid black;
+    flex: 1;
+    height: 50px;
+    padding: 5px;
+}
+
+.roundStarter{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+#score{
+    display: flex;
+    padding-top: 10px;
+    justify-content: center;
+}
+
+#result{
+    display: flex;
+    justify-content: center;
+}
+
+#Rock, #Paper, #Scissors{
+    border-radius: 10px;
+    background-color: brown;
+}
+
+.button {
+    border-radius: 15px;
+}
+
+*/

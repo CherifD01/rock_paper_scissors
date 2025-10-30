@@ -56,11 +56,17 @@ function playRound(choice){
         humanScore = humanScore - humanScore;
         computerScore = computerScore - computerScore;
         gameResult.textContent = "You won the game!";
+        rockSelection.disabled = true;
+        paperSelection.disabled = true;
+        scissorsSelection.disabled = true;
     }
     if (computerScore === 5){
         humanScore = humanScore - humanScore;
         computerScore = computerScore - computerScore;
         gameResult.textContent = "You lost the game!";
+        rockSelection.disabled = true;
+        paperSelection.disabled = true;
+        scissorsSelection.disabled = true;
     }
     
 }
@@ -70,7 +76,7 @@ function playRound(choice){
 const startRound = document.querySelector("#startRound");
 const rockSelection = document.querySelector("#Rock");
 const paperSelection = document.querySelector("#Paper");
-const scissorsSelection = document.querySelector("#Scissors");
+const scissorsSelection = document.querySelector("#Scissors"); 
 const gameScore = document.querySelector("#score");
 const gameResult = document.querySelector("#result")
 
@@ -85,6 +91,9 @@ startRound.addEventListener("click", () => {
     computerScore = computerScore - computerScore;
     gameScore.textContent = humanScore + " - " + computerScore;
     gameResult.textContent = " ";
+    rockSelection.disabled = false;
+    paperSelection.disabled = false;
+    scissorsSelection.disabled = false;
 });
 
 //Where the selection for the user is
